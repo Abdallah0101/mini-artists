@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#BFE9FF"/>
+  <rect y="60" width="600" height="390" fill="#8ED4F7"/>
+  <!-- raios de sol na água -->
+  <g stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".5">
+    <path d="M120 70 l30 120"/><path d="M280 70 l20 100"/><path d="M430 70 l35 130"/>
+  </g>
+  <!-- ondas na superfície -->
+  <path d="M0 60 q30 -18 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="#EAF8FF" stroke="#8ED4F7" stroke-width="4"/>
+  <!-- areia -->
+  <path d="M0 390 q150 -25 300 0 t300 0 l0 60 l-600 0z" fill="#FFE3AE" stroke="#E8C56A" stroke-width="4"/>
+  <!-- corais -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M80 395 v-55 m0 20 l-22 -22 m22 40 l24 -26 m-24 8 v-30" stroke="#FF5C8A" stroke-width="12"/>
+    <path d="M500 398 v-45 m0 15 l-18 -18 m18 32 l20 -20" stroke="#FF9D42" stroke-width="12"/>
+    <path d="M545 400 v-35 m0 12 l-14 -14" stroke="#9B6BEA" stroke-width="10"/>
+  </g>
+  <!-- algas -->
+  <path d="M150 405 q-12 -40 5 -70 q14 30 3 70z" fill="#3EA873"/>
+  <path d="M430 408 q-10 -35 4 -60 q12 25 3 60z" fill="#3EA873"/>
+  <!-- tartaruga grande -->
+  <g>
+    <ellipse cx="300" cy="230" rx="78" ry="55" fill="#71D6A2" stroke="#3EA873" stroke-width="6"/>
+    <path d="M245 215 q55 -30 110 0 q-20 20 -55 20 q-35 0 -55 -20z" fill="#3EA873" opacity=".45"/>
+    <path d="M240 250 q60 25 120 0" fill="none" stroke="#3EA873" stroke-width="5" stroke-linecap="round"/>
+    <!-- casco: detalhes -->
+    <circle cx="285" cy="222" r="10" fill="#3EA873" opacity=".5"/>
+    <circle cx="320" cy="240" r="8" fill="#3EA873" opacity=".5"/>
+    <!-- cabeça -->
+    <circle cx="385" cy="215" r="26" fill="#8FE3B5" stroke="#3EA873" stroke-width="6"/>
+    <circle cx="392" cy="208" r="5" fill="#100B35"/>
+    <path d="M388 224 q8 6 16 2" fill="none" stroke="#3EA873" stroke-width="4" stroke-linecap="round"/>
+    <!-- nadadeiras -->
+    <path d="M250 265 q-30 25 -20 50 q25 -8 40 -30z" fill="#8FE3B5" stroke="#3EA873" stroke-width="5"/>
+    <path d="M330 270 q-10 35 10 52 q18 -18 18 -42z" fill="#8FE3B5" stroke="#3EA873" stroke-width="5"/>
+    <path d="M255 195 q-35 -15 -48 -40 q32 -2 52 18z" fill="#8FE3B5" stroke="#3EA873" stroke-width="5"/>
+  </g>
+  <!-- tartaruguinha -->
+  <g>
+    <ellipse cx="130" cy="150" rx="34" ry="24" fill="#71D6A2" stroke="#3EA873" stroke-width="5"/>
+    <circle cx="168" cy="143" r="13" fill="#8FE3B5" stroke="#3EA873" stroke-width="4"/>
+    <circle cx="171" cy="140" r="3" fill="#100B35"/>
+    <path d="M105 165 q-14 12 -10 24 q12 -4 20 -14z" fill="#8FE3B5" stroke="#3EA873" stroke-width="4"/>
+  </g>
+  <!-- peixinhos -->
+  <g>
+    <path d="M455 150 q25 -18 45 0 q-20 18 -45 0z M455 150 l-16 -12 q0 24 0 24z" fill="#FFD45A" stroke="#E8A93D" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="488" cy="146" r="3.5" fill="#100B35"/>
+    <path d="M195 300 q20 -15 38 0 q-18 15 -38 0z M195 300 l-13 -10 q0 20 0 20z" fill="#FF9D42" stroke="#E5711B" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="222" cy="297" r="3" fill="#100B35"/>
+    <path d="M520 250 q17 -12 32 0 q-15 12 -32 0z M520 250 l-11 -8 q0 16 0 16z" fill="#FF8FB0" stroke="#C22B5C" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="542" cy="247" r="2.5" fill="#100B35"/>
+  </g>
+  <!-- bolhas -->
+  <g fill="#EAF8FF" stroke="#8ED4F7" stroke-width="3" opacity=".9">
+    <circle cx="400" cy="160" r="8"/><circle cx="415" cy="130" r="6"/><circle cx="425" cy="105" r="4"/>
+    <circle cx="150" cy="110" r="6"/><circle cx="165" cy="88" r="4"/>
+    <circle cx="70" cy="250" r="7"/><circle cx="85" cy="222" r="5"/>
+  </g>
+  <!-- estrela do mar -->
+  <path d="M350 400 l8 16 18 3 -13 12 3 18 -16 -9 -16 9 3 -18 -13 -12 18 -3z" fill="#FF9D42" stroke="#E5711B" stroke-width="4" stroke-linejoin="round"/>
+</svg>

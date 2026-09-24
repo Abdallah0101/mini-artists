@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <!-- céu em faixas de pôr do sol -->
+  <rect width="600" height="130" fill="#7C4DA8"/>
+  <rect y="130" width="600" height="90" fill="#C05C9B"/>
+  <rect y="220" width="600" height="80" fill="#FF7B6B"/>
+  <rect y="300" width="600" height="70" fill="#FF9D42"/>
+  <!-- sol descendo -->
+  <circle cx="300" cy="330" r="70" fill="#FFD45A" stroke="#FF9D42" stroke-width="6"/>
+  <circle cx="300" cy="330" r="52" fill="#FFE9A8"/>
+  <!-- nuvens rosadas -->
+  <g fill="#FFC7D8" opacity=".9">
+    <ellipse cx="130" cy="150" rx="55" ry="18"/>
+    <ellipse cx="470" cy="120" rx="60" ry="20"/>
+    <ellipse cx="420" cy="200" rx="40" ry="13"/>
+  </g>
+  <!-- pássaros -->
+  <g stroke="#5B2E6E" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M170 110 q10 -12 20 0 q10 -12 20 0"/>
+    <path d="M230 80 q8 -10 16 0 q8 -10 16 0"/>
+    <path d="M400 90 q9 -11 18 0 q9 -11 18 0"/>
+  </g>
+  <!-- mar/grama espelhando o céu -->
+  <path d="M0 370 q300 -30 600 0 l0 80 l-600 0z" fill="#B0578D"/>
+  <path d="M0 385 q300 -25 600 0 l0 65 l-600 0z" fill="#7C4DA8"/>
+  <!-- reflexo do sol -->
+  <g stroke="#FFD45A" stroke-width="8" stroke-linecap="round" opacity=".8">
+    <path d="M275 385 h50"/><path d="M265 405 h70"/><path d="M285 425 h30"/>
+  </g>
+  <!-- colina -->
+  <path d="M340 450 q110 -90 260 -60 l0 60z" fill="#3A1C6E"/>
+  <!-- árvore -->
+  <g stroke="#2A1254" stroke-linecap="round" fill="none">
+    <path d="M480 410 q-8 -70 10 -120" stroke-width="16"/>
+    <path d="M488 320 q-30 -25 -55 -20" stroke-width="10"/>
+    <path d="M490 300 q25 -30 55 -28" stroke-width="10"/>
+  </g>
+  <!-- copa -->
+  <g fill="#E85C9B" stroke="#C22B5C" stroke-width="4">
+    <circle cx="430" cy="280" r="26"/><circle cx="470" cy="255" r="34"/>
+    <circle cx="520" cy="262" r="30"/><circle cx="550" cy="292" r="22"/>
+    <circle cx="455" cy="300" r="20"/>
+  </g>
+  <!-- balanço -->
+  <g stroke="#5B2E6E" stroke-width="4" stroke-linecap="round">
+    <path d="M437 298 v55"/><path d="M463 300 v55"/>
+  </g>
+  <rect x="430" y="352" width="40" height="10" rx="5" fill="#8a5a2b"/>
+  <!-- flores da colina -->
+  <g>
+    <circle cx="560" cy="415" r="7" fill="#FFD45A"/>
+    <circle cx="520" cy="428" r="7" fill="#FF8FB0"/>
+    <circle cx="580" cy="432" r="7" fill="#9B6BEA"/>
+  </g>
+  <!-- estrelinhas começando a aparecer -->
+  <g fill="#FFE9A8">
+    <path d="M90 50 l4 9 10 1 -7 7 2 10 -9 -5 -9 5 2 -10 -7 -7 10 -1z"/>
+    <path d="M520 40 l4 9 10 1 -7 7 2 10 -9 -5 -9 5 2 -10 -7 -7 10 -1z"/>
+    <circle cx="300" cy="60" r="4"/><circle cx="380" cy="40" r="3"/><circle cx="200" cy="40" r="3"/>
+  </g>
+</svg>

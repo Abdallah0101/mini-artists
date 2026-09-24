@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <!-- céu azul rabiscado -->
+  <rect width="600" height="450" fill="#DCEEFF"/>
+  <g stroke="#9CCBF5" stroke-width="6" stroke-linecap="round" fill="none" opacity=".7">
+    <path d="M20 40 q40 -14 80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+    <path d="M10 90 q40 -14 80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+    <path d="M25 420 q40 -14 80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+  </g>
+  <!-- estrelas -->
+  <g fill="#FFD45A" stroke="#E8A93D" stroke-width="3" stroke-linejoin="round">
+    <path d="M80 70 l8 18 19 2 -14 13 4 19 -17 -10 -17 10 4 -19 -14 -13 19 -2 z"/>
+    <path d="M500 60 l6 14 15 2 -11 10 3 15 -13 -8 -13 8 3 -15 -11 -10 15 -2 z"/>
+    <path d="M450 380 l6 14 15 2 -11 10 3 15 -13 -8 -13 8 3 -15 -11 -10 15 -2 z"/>
+    <path d="M120 360 l5 12 13 2 -10 9 3 13 -11 -7 -11 7 3 -13 -10 -9 13 -2 z"/>
+  </g>
+  <!-- planeta com anel -->
+  <g>
+    <ellipse cx="495" cy="300" rx="75" ry="18" fill="none" stroke="#9B6BEA" stroke-width="8" stroke-linecap="round" transform="rotate(-18 495 300)"/>
+    <circle cx="495" cy="300" r="48" fill="#B78DF0" stroke="#6D3FD3" stroke-width="6"/>
+    <circle cx="480" cy="285" r="9" fill="#6D3FD3" opacity=".5"/>
+    <circle cx="510" cy="315" r="6" fill="#6D3FD3" opacity=".5"/>
+  </g>
+  <!-- planeta verde pequeno -->
+  <circle cx="95" cy="180" r="30" fill="#71D6A2" stroke="#3EA873" stroke-width="6"/>
+  <circle cx="86" cy="172" r="6" fill="#3EA873" opacity=".55"/>
+  <!-- nave / foguete -->
+  <g transform="rotate(18 300 230)">
+    <!-- chamas -->
+    <path d="M285 350 q15 45 30 0 q8 28 -2 55 q-13 20 -26 0 q-10 -27 -2 -55z" fill="#FF9D42" stroke="#E5711B" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M292 352 q8 22 16 0 q4 15 -2 30 q-6 10 -12 0 q-6 -15 -2 -30z" fill="#FFD45A"/>
+    <!-- corpo -->
+    <path d="M300 80 q55 60 55 160 l0 110 q-55 22 -110 0 l0 -110 q0 -100 55 -160z" fill="#FF5C5C" stroke="#C93A3A" stroke-width="6" stroke-linejoin="round"/>
+    <!-- janela -->
+    <circle cx="300" cy="195" r="34" fill="#BFE9FF" stroke="#2E6FA3" stroke-width="6"/>
+    <circle cx="292" cy="188" r="9" fill="#fff" opacity=".8"/>
+    <!-- asas -->
+    <path d="M248 260 q-45 40 -40 95 q35 -5 48 -25z" fill="#6D3FD3" stroke="#4B237C" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M352 260 q45 40 40 95 q-35 -5 -48 -25z" fill="#6D3FD3" stroke="#4B237C" stroke-width="6" stroke-linejoin="round"/>
+    <!-- listra -->
+    <path d="M250 290 q50 18 100 0" stroke="#FFD45A" stroke-width="10" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- estrelinhas soltas -->
+  <g fill="#FF9D42">
+    <circle cx="180" cy="120" r="6"/>
+    <circle cx="415" cy="150" r="6"/>
+    <circle cx="360" cy="390" r="6"/>
+    <circle cx="210" cy="320" r="6"/>
+  </g>
+</svg>

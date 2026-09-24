@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#1B1145"/>
+  <!-- estrelas -->
+  <g fill="#FFD45A">
+    <path d="M80 80 l7 15 16 2 -12 11 3 16 -14 -8 -14 8 3 -16 -12 -11 16 -2z"/>
+    <path d="M510 90 l6 13 14 2 -10 10 2 14 -12 -7 -12 7 2 -14 -10 -10 14 -2z"/>
+    <path d="M160 300 l5 11 12 2 -9 8 2 12 -10 -6 -10 6 2 -12 -9 -8 12 -2z"/>
+    <path d="M450 320 l5 11 12 2 -9 8 2 12 -10 -6 -10 6 2 -12 -9 -8 12 -2z"/>
+    <circle cx="250" cy="70" r="4"/><circle cx="340" cy="55" r="3"/>
+    <circle cx="70" cy="220" r="4"/><circle cx="540" cy="220" r="4"/>
+  </g>
+  <!-- estrela cadente -->
+  <g>
+    <path d="M470 50 q-60 30 -100 70" stroke="#FFE9A8" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8"/>
+    <path d="M480 42 l6 12 13 2 -10 9 3 13 -12 -7 -12 7 3 -13 -10 -9 13 -2z" fill="#FFE9A8"/>
+  </g>
+  <!-- lua crescente grande -->
+  <path d="M395 320 a130 130 0 1 1 -92 -215 a104 104 0 1 0 92 215z" fill="#FFE9A8" stroke="#E8C56A" stroke-width="6" stroke-linejoin="round"/>
+  <!-- crateras da lua -->
+  <circle cx="350" cy="330" r="12" fill="#F0D68A"/>
+  <circle cx="385" cy="290" r="8" fill="#F0D68A"/>
+  <!-- gata sentada na lua -->
+  <g>
+    <!-- cauda -->
+    <path d="M330 210 q55 10 60 60 q2 25 -15 30 q-12 4 -16 -8 q-3 -10 6 -14 q12 -6 8 -28 q-4 -25 -45 -30z" fill="#B78DF0" stroke="#6D3FD3" stroke-width="5" stroke-linejoin="round"/>
+    <!-- corpo -->
+    <path d="M285 290 q-35 0 -40 -45 q-5 -50 30 -75 q30 -22 55 0 q28 25 20 75 q-6 45 -30 45z" fill="#D3B8F7" stroke="#6D3FD3" stroke-width="5" stroke-linejoin="round"/>
+    <!-- barriguinha -->
+    <ellipse cx="298" cy="255" rx="18" ry="26" fill="#EFE4FB"/>
+    <!-- cabeça -->
+    <circle cx="295" cy="140" r="42" fill="#D3B8F7" stroke="#6D3FD3" stroke-width="5"/>
+    <!-- orelhas -->
+    <path d="M262 112 l-10 -30 l30 14z" fill="#D3B8F7" stroke="#6D3FD3" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M328 112 l10 -30 l-30 14z" fill="#D3B8F7" stroke="#6D3FD3" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M262 104 l-5 -15 l15 7z" fill="#FF8FB0"/>
+    <path d="M328 104 l5 -15 l-15 7z" fill="#FF8FB0"/>
+    <!-- rosto -->
+    <path d="M272 138 q6 -8 14 0 M304 138 q6 -8 14 0" fill="none" stroke="#100B35" stroke-width="4" stroke-linecap="round"/>
+    <path d="M290 152 q5 5 10 0" fill="none" stroke="#C22B5C" stroke-width="4" stroke-linecap="round"/>
+    <path d="M295 146 l-5 6 h10z" fill="#FF8FB0"/>
+    <!-- bigodes -->
+    <g stroke="#6D3FD3" stroke-width="3" stroke-linecap="round">
+      <path d="M255 148 l-22 -4 M256 158 l-20 6 M335 148 l22 -4 M334 158 l20 6"/>
+    </g>
+    <!-- bochechas -->
+    <circle cx="268" cy="152" r="6" fill="#FF8FB0" opacity=".6"/>
+    <circle cx="322" cy="152" r="6" fill="#FF8FB0" opacity=".6"/>
+    <!-- patinhas -->
+    <ellipse cx="280" cy="292" rx="12" ry="8" fill="#EFE4FB" stroke="#6D3FD3" stroke-width="4"/>
+    <ellipse cx="312" cy="292" rx="12" ry="8" fill="#EFE4FB" stroke="#6D3FD3" stroke-width="4"/>
+  </g>
+  <!-- nuvenzinha -->
+  <g fill="#3A2A6E" stroke="#5543A0" stroke-width="4">
+    <path d="M80 380 q4 -22 28 -20 q8 -16 28 -9 q20 -5 21 14 q16 4 9 18 q-5 10 -22 8 l-55 0 q-14 -1 -9 -11z"/>
+  </g>
+  <path d="M105 396 v10 M135 396 v10 M120 402 v10" stroke="#9B6BEA" stroke-width="4" stroke-linecap="round"/>
+</svg>
