@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mlk-005',
+    slug: 'mundo-dos-gatos',
+    artistId: 'malik',
+    title: 'Mundo dos Gatos',
+    emoji: '😺',
+    description: 'No meu mundo dos gatos tem muitos gatinhos fofinhos, corações, uma borboleta e abelhinhas voando!',
+    category: 'Animais 🐱',
+    image: img('malik', 'mundo-dos-gatos.jpg'),
+    createdAt: '2026-09-25',
+    likes: 0,
+  },
+  {
     id: 'mlk-004',
     slug: 'a-nave-espacial',
     artistId: 'malik',
