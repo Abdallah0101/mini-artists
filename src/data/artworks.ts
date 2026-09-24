@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mrm-005',
+    slug: 'garosa',
+    artistId: 'maryam',
+    title: 'Garosa',
+    emoji: '🐱',
+    description: 'Esse é o Garosa, meu gato rosa! Ele adora ficar no sol caçando borboletas e cercado de corações!',
+    category: 'Animais 🐱',
+    image: img('maryam', 'garosa.jpg'),
+    createdAt: '2026-09-25',
+    likes: 0,
+  },
+  {
     id: 'mlk-005',
     slug: 'mundo-dos-gatos',
     artistId: 'malik',
