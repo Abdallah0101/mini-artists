@@ -4,7 +4,7 @@ import ShareSection from '../components/ShareSection'
 
 export default function GalleryPage() {
   useEffect(() => {
-    document.title = '🖼️ Galeria de Desenhos — Mini Artists'
+    document.title = '🖼️ Galeria de Desenhos — MARMALILYTAS'
   }, [])
 
   return (

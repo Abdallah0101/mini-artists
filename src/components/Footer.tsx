@@ -10,9 +10,7 @@ export default function Footer() {
           <div>
             <div className="footer-logo">
               <DoodlePalette size={36} />
-              <span>
-                Mini <em>Artists</em>
-              </span>
+              <span className="navbar-brand">MARMA<em>LILYTAS</em></span>
             </div>
             <p className="footer-tagline">
               Uma pequena galeria digital da imaginação das crianças.

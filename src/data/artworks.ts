@@ -1,12 +1,7 @@
 /**
  * CATÁLOGO DE OBRAS
  * -----------------
- * Cada obra possui: id, slug (URL), artistId, title, emoji, description,
- * image (arquivo em public/artworks/<artista>/), createdAt (ISO) e likes.
- *
- * O AI Agent (Telegram) adiciona novas obras inserindo um objeto aqui
- * e salvando a imagem na pasta do artista. O site descobre tudo sozinho:
- * filtros, ordenação, páginas /arte/<slug> e contadores são automáticos.
+ * Mantido pelo AI Agent do Telegram — ver AGENTEAI.md na raiz do projeto.
  */
 
 export interface Artwork {
@@ -18,6 +13,8 @@ export interface Artwork {
   emoji: string
   /** descrição com a voz da criança */
   description: string
+  /** classificação da obra: assunto/técnica (ex.: "Espaço 🚀", "Aquarela 🎨") */
+  category: string
   /** caminho da imagem dentro de public/ (sem a base URL) */
   image: string
   /** data de criação, formato ISO: AAAA-MM-DD */
@@ -37,18 +34,20 @@ export const artworks: Artwork[] = [
     title: 'A Nave Espacial',
     emoji: '🚀',
     description: 'Minha nave vai para o planeta das estrelas coloridas!',
+    category: 'Espaço 🚀',
     image: img('malik', 'a-nave-espacial.svg'),
     createdAt: '2026-09-20',
     likes: 12,
   },
   {
-    id: 'mnr-004',
+    id: 'mrm-004',
     slug: 'fundo-do-mar-magico',
-    artistId: 'mnaryam',
+    artistId: 'maryam',
     title: 'Fundo do Mar Mágico',
     emoji: '🐢',
     description: 'As tartarugas estão nadando entre os corais e peixinhos brilhantes.',
-    image: img('mnaryam', 'fundo-do-mar-magico.svg'),
+    category: 'Fundo do Mar 🐢',
+    image: img('maryam', 'fundo-do-mar-magico.svg'),
     createdAt: '2026-09-18',
     likes: 18,
   },
@@ -59,18 +58,20 @@ export const artworks: Artwork[] = [
     title: 'O Dragão Azul',
     emoji: '🐉',
     description: 'Um dragão azul voando sobre uma montanha cheia de estrelas.',
+    category: 'Fantasia 🐉',
     image: img('malik', 'o-dragao-azul.svg'),
     createdAt: '2026-09-14',
     likes: 15,
   },
   {
-    id: 'mnr-003',
+    id: 'mrm-003',
     slug: 'por-do-sol-dos-sonhos',
-    artistId: 'mnaryam',
+    artistId: 'maryam',
     title: 'Pôr do Sol dos Sonhos',
     emoji: '🌅',
     description: 'O céu fica laranja, rosa e roxo no final do dia. Muito lindo!',
-    image: img('mnaryam', 'por-do-sol-dos-sonhos.svg'),
+    category: 'Paisagem 🌅',
+    image: img('maryam', 'por-do-sol-dos-sonhos.svg'),
     createdAt: '2026-09-10',
     likes: 15,
   },
@@ -81,18 +82,20 @@ export const artworks: Artwork[] = [
     title: 'Castelo Encantado',
     emoji: '🏰',
     description: 'Meu castelo tem um arco-íris e um dragão que é meu amigo!',
+    category: 'Fantasia 🐉',
     image: img('malik', 'castelo-encantado.svg'),
     createdAt: '2026-09-08',
     likes: 9,
   },
   {
-    id: 'mnr-002',
+    id: 'mrm-002',
     slug: 'a-gata-lunar',
-    artistId: 'mnaryam',
+    artistId: 'maryam',
     title: 'A Gata Lunar',
     emoji: '🐱',
     description: 'Ela mora na lua e só desce quando tem estrela cadente.',
-    image: img('mnaryam', 'a-gata-lunar.svg'),
+    category: 'Animais 🐱',
+    image: img('maryam', 'a-gata-lunar.svg'),
     createdAt: '2026-09-02',
     likes: 21,
   },
@@ -103,18 +106,20 @@ export const artworks: Artwork[] = [
     title: 'Dinossauro Astronauta',
     emoji: '🦕',
     description: 'Ele foi visitar a lua e virou amigo dos alienígenas.',
+    category: 'Dinossauros 🦕',
     image: img('malik', 'dinossauro-astronauta.svg'),
     createdAt: '2026-08-30',
     likes: 11,
   },
   {
-    id: 'mnr-001',
+    id: 'mrm-001',
     slug: 'jardim-de-estrelas',
-    artistId: 'mnaryam',
+    artistId: 'maryam',
     title: 'Jardim de Estrelas',
     emoji: '🌸',
     description: 'Um jardim onde as flores brilham de noite como estrelinhas.',
-    image: img('mnaryam', 'jardim-de-estrelas.svg'),
+    category: 'Natureza 🌸',
+    image: img('maryam', 'jardim-de-estrelas.svg'),
     createdAt: '2026-08-25',
     likes: 14,
   },

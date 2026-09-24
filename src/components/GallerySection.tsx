@@ -22,11 +22,22 @@ interface Props {
 
 export default function GallerySection({ fixedArtistId, showHeader = true }: Props) {
   const [filter, setFilter] = useState<string>(fixedArtistId ?? 'todos')
+  const [category, setCategory] = useState<string>('todas')
   const [sort, setSort] = useState<SortKey>('recentes')
+
+  /** classificações geradas automaticamente a partir das obras cadastradas */
+  const categories = useMemo(
+    () => [...new Set(artworks.map((a) => a.category))],
+    [],
+  )
 
   const visible = useMemo(() => {
     const activeFilter = fixedArtistId ?? filter
-    const list = artworks.filter((a) => activeFilter === 'todos' || a.artistId === activeFilter)
+    let list = artworks.filter(
+      (a) =>
+        (activeFilter === 'todos' || a.artistId === activeFilter) &&
+        (category === 'todas' || a.category === category),
+    )
     const byArtist = (id: string) => artists.findIndex((a) => a.id === id)
     switch (sort) {
       case 'recentes':
@@ -40,7 +51,7 @@ export default function GallerySection({ fixedArtistId, showHeader = true }: Pro
           (a, b) => byArtist(a.artistId) - byArtist(b.artistId) || b.createdAt.localeCompare(a.createdAt),
         )
     }
-  }, [filter, sort, fixedArtistId])
+  }, [filter, category, sort, fixedArtistId])
 
   return (
     <section className="gallery-section container" id="galeria" aria-label="Galeria de desenhos">
@@ -92,6 +103,29 @@ export default function GallerySection({ fixedArtistId, showHeader = true }: Pro
             ))}
           </select>
         </label>
+      </div>
+
+      {/* filtro por classificação (assunto/técnica da obra) */}
+      <div className="gallery-filters gallery-categories" role="group" aria-label="Filtrar por classificação">
+        <button
+          type="button"
+          className={`filter-pill cat ${category === 'todas' ? 'active' : ''}`}
+          onClick={() => setCategory('todas')}
+          aria-pressed={category === 'todas'}
+        >
+          🗂️ Todas
+        </button>
+        {categories.map((c) => (
+          <button
+            key={c}
+            type="button"
+            className={`filter-pill cat ${category === c ? 'active' : ''}`}
+            onClick={() => setCategory(c)}
+            aria-pressed={category === c}
+          >
+            {c}
+          </button>
+        ))}
       </div>
 
       {visible.length === 0 ? (

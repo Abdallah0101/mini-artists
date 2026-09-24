@@ -45,16 +45,16 @@ export const artists: Artist[] = [
       'Malik adora desenhar e transformar sua imaginação em cores. Naves espaciais, dragões e dinossauros ganham vida no seu papel!',
   },
   {
-    id: 'mnaryam',
-    name: 'Mnaryam',
+    id: 'maryam',
+    name: 'Maryam',
     age: 10,
-    avatar: `${base}avatars/mnaryam.jpg`,
+    avatar: `${base}avatars/maryam.jpg`,
     color: '#FF5C8A',
     colorSoft: '#FFF0F5',
     emoji: '🌸',
     tagline: 'Sonhadora oficial da galáxia das cores',
     description:
-      'Mnaryam desenha o mundo como ela gostaria que ele fosse: cheio de flores, pores do sol e magia. Cada traço dela conta uma história.',
+      'Maryam desenha o mundo como ela gostaria que ele fosse: cheio de flores, pores do sol e magia. Cada traço dela conta uma história.',
   },
 ]
 

@@ -40,9 +40,9 @@ const bg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
     <path d="M152 560 a48 48 0 0 1 96 0" stroke="#55B8F7"/>
   </g>
   <text x="600" y="255" text-anchor="middle" font-family="Comic Sans MS, sans-serif"
-    font-size="100" font-weight="700" fill="#FFFFFF">Mini <tspan fill="url(#word)">Artists</tspan></text>
+    font-size="92" font-weight="700" fill="#FFFFFF">MARMA<tspan fill="url(#word)">LILYTAS</tspan></text>
   <text x="600" y="330" text-anchor="middle" font-family="Comic Sans MS, sans-serif"
-    font-size="40" font-weight="700" fill="#D9CFF2">Galeria de Arte de Malik &amp; Mnaryam</text>
+    font-size="40" font-weight="700" fill="#D9CFF2">Galeria de Arte de Malik &amp; Maryam</text>
   <text x="600" y="392" text-anchor="middle" font-family="Comic Sans MS, sans-serif"
     font-size="30" font-weight="600" fill="#9B6BEA">Arte feita com imaginação, amor e muitas cores</text>
 </svg>`
@@ -65,15 +65,15 @@ async function circleAvatar(path, size, ring) {
   return sharp(clipped).composite([{ input: ringSvg }]).png().toBuffer()
 }
 
-const [malik, mnaryam] = await Promise.all([
+const [malik, maryam] = await Promise.all([
   circleAvatar('public/avatars/malik.jpg', 190, '#55B8F7'),
-  circleAvatar('public/avatars/mnaryam.jpg', 190, '#FF5C8A'),
+  circleAvatar('public/avatars/maryam.jpg', 190, '#FF5C8A'),
 ])
 
 await sharp(Buffer.from(bg))
   .composite([
     { input: malik, left: 60, top: 215 },
-    { input: mnaryam, left: 950, top: 215 },
+    { input: maryam, left: 950, top: 215 },
   ])
   .png()
   .toFile('public/og-image.png')

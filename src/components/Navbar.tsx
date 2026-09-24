@@ -20,10 +20,10 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <nav className="navbar-inner" aria-label="Navegação principal">
-        <Link to="/" className="navbar-logo" aria-label="Mini Artists — página inicial">
+        <Link to="/" className="navbar-logo" aria-label="MARMALILYTAS — página inicial">
           <DoodlePalette size={40} />
           <span className="navbar-logo-text">
-            Mini <em>Artists</em>
+            <span className="navbar-brand">MARMA<em>LILYTAS</em></span>
             <small>Galeria dos pequenos grandes artistas</small>
           </span>
         </Link>

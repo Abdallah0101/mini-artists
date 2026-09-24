@@ -1,9 +1,9 @@
-# 🎨 Mini Artists — Galeria de Arte Infantil
+# 🎨 MARMALILYTAS — Galeria de Arte Infantil
 
 > Uma pequena galeria digital da imaginação das crianças.
 > Cada desenho é uma obra de arte.
 
-Galeria permanente dos desenhos de **Malik (5 anos)** e **Mnaryam (10 anos)** —
+Galeria permanente dos desenhos de **Malik (5 anos)** e **Maryam (10 anos)** —
 construída para crescer: novos artistas e novas obras entram apenas mexendo em **dados**,
 sem tocar no HTML.
 

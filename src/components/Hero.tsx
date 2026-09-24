@@ -31,7 +31,7 @@ function useStars(count: number) {
 
 export default function Hero() {
   const stars = useStars(46)
-  const [malik, mnaryam] = artists
+  const [malik, maryam] = artists
 
   return (
     <section className="hero" aria-label="Boas-vindas à galeria">
@@ -54,7 +54,7 @@ export default function Hero() {
       </div>
 
       {/* elementos decorativos flutuantes */}
-      <div className="hero-decor" aria-hidden="false">
+      <div className="hero-decor">
         <DoodleMoon size={86} className="hero-moon float-slow" tip="Boa noite, artistas! 🌙" />
         <DoodleCloud size={110} className="hero-cloud c1 drift" color="#EAE2FB" tip="☁️ Sonhando alto..." />
         <DoodleCloud size={80} className="hero-cloud c2 drift-rev" color="#DDD3F5" />
@@ -79,7 +79,7 @@ export default function Hero() {
             amor e <span className="hl hl-rainbow">muitas cores</span>
           </h1>
           <p className="hero-subtitle">
-            Bem-vindo à galeria de {malik.name} e {mnaryam.name}!
+            Bem-vindo à galeria de {malik.name} e {maryam.name}!
             <br />
             Aqui cada desenho conta uma história única saída direto do coração. 💜
           </p>
@@ -93,30 +93,39 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* composição dos artistas */}
-        <div className="hero-artists" aria-label="Os artistas da galeria">
-          <div className="hero-frame">
-            {artists.map((a, i) => (
-              <Link
-                to={`/artistas/${a.id}`}
-                key={a.id}
-                className={`hero-avatar ${i === 0 ? 'a1' : 'a2'}`}
-                style={{ borderColor: a.color }}
-                aria-label={`Ver página de ${a.name}`}
-              >
-                <img src={a.avatar} alt={`Foto de ${a.name}`} />
-                <span className="hero-avatar-chip" style={{ background: a.color }}>
-                  {a.name}, {a.age}
-                </span>
-              </Link>
-            ))}
-            <DoodleSparkle size={30} className="frame-sparkle twinkle-soft" />
-          </div>
-          <p className="hero-quote" aria-hidden="true">
-            “Cada traço, uma descoberta.
-            <br />
-            Cada cor, uma emoção.”
-          </p>
+        {/* quadro dos artistas desenhando */}
+        <div className="hero-artists">
+          <figure className="hero-picture">
+            <span className="hero-tape tl" aria-hidden="true" />
+            <span className="hero-tape tr" aria-hidden="true" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/hero.jpg`}
+              alt={`Ilustração de ${malik.name} e ${maryam.name} desenhando juntos num ateliê cheio de estrelas`}
+            />
+            <figcaption>
+              {malik.name} &amp; {maryam.name} criando magia ✨
+            </figcaption>
+
+            {/* mini-avatares reais pendurados no quadro */}
+            <div className="hero-minis">
+              {artists.map((a, i) => (
+                <Link
+                  to={`/artistas/${a.id}`}
+                  key={a.id}
+                  className={`hero-mini ${i === 0 ? 'm1' : 'm2'}`}
+                  style={{ borderColor: a.color }}
+                  aria-label={`Ver página de ${a.name}`}
+                  title={`${a.emoji} Conheça ${a.name}!`}
+                >
+                  <img src={a.avatar} alt="" aria-hidden="true" />
+                  <span className="hero-mini-chip" style={{ background: a.color }}>
+                    {a.name}, {a.age}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </figure>
+          <DoodleSparkle size={30} className="picture-sparkle twinkle-soft" tip="✨ Obra-prima em andamento!" />
         </div>
       </div>
 

@@ -16,7 +16,7 @@ import {
 
 export default function HomePage() {
   useEffect(() => {
-    document.title = 'Mini Artists — Galeria de Arte de Malik & Mnaryam'
+    document.title = 'MARMALILYTAS — Galeria de Arte de Malik & Maryam'
   }, [])
 
   return (

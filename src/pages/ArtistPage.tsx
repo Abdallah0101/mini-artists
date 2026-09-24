@@ -9,7 +9,7 @@ export default function ArtistPage() {
   const artist = artistId ? getArtist(artistId) : undefined
 
   useEffect(() => {
-    if (artist) document.title = `${artist.emoji} ${artist.name} — Mini Artists`
+    if (artist) document.title = `${artist.emoji} ${artist.name} — MARMALILYTAS`
   }, [artist])
 
   if (!artist) {

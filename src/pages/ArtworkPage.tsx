@@ -14,7 +14,7 @@ export default function ArtworkPage() {
 
   useEffect(() => {
     if (artwork && artist) {
-      document.title = `${artwork.emoji} ${artwork.title} — Arte de ${artist.name} | Mini Artists`
+      document.title = `${artwork.emoji} ${artwork.title} — Arte de ${artist.name} | MARMALILYTAS`
     }
   }, [artwork, artist])
 

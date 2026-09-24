@@ -6,7 +6,7 @@ import { getArtist } from '../data/artists'
 
 /** Coração com curtida local (localStorage). Pronto para virar "favoritos" com backend. */
 export function useLiked(artworkId: string): [boolean, () => void] {
-  const key = `mini-artists:like:${artworkId}`
+  const key = `marmalilytas:like:${artworkId}`
   const [liked, setLiked] = useState<boolean>(() => {
     try {
       return localStorage.getItem(key) === '1'
@@ -87,6 +87,7 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
               {artist.name}
             </span>
           )}
+          <span className="art-card-artist art-card-cat">{artwork.category}</span>
           <p className="art-card-desc">{artwork.description}</p>
           <div className="art-card-footer">
             <time dateTime={artwork.createdAt}>{formatDate(artwork.createdAt)}</time>
