@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mlk-007',
+    slug: 'a-luta-do-macaco-e-godzilla',
+    artistId: 'malik',
+    title: 'A Luta do Macaco e Godzilla',
+    emoji: '🦍',
+    description: 'Meu macaco gigante é mais forte que o Godzilla, olha o chute que ele deu pra salvar todo mundo!',
+    category: 'Fantasia 🐉',
+    image: img('malik', 'a-luta-do-macaco-e-godzilla.jpg'),
+    createdAt: '2026-09-25',
+    likes: 0,
+  },
+  {
     id: 'mlk-006',
     slug: 'o-tigre-extinto-e-o-monstro',
     artistId: 'malik',
