@@ -51,6 +51,8 @@ export default function Hero() {
             }}
           />
         ))}
+        <span className="shooting-star" />
+        <span className="shooting-star s2" />
       </div>
 
       {/* elementos decorativos flutuantes */}

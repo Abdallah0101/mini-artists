@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { DoodleSparkle, DoodleHeart, DoodleStar } from './Doodles'
+import WhatsAppButton from './WhatsAppButton'
 
 export function useCopyLink() {
   const [copied, setCopied] = useState(false)
@@ -55,6 +56,13 @@ export default function ShareSection() {
           <button type="button" className="btn btn-copy" onClick={() => copy(url)} aria-live="polite">
             {copied ? 'Link copiado! ✨' : '📋 Copiar link'}
           </button>
+        </div>
+
+        <div className="share-whats-row">
+          <WhatsAppButton
+            text={`🎨 MARMALILYTAS — a galeria de arte de Malik & Maryam! Cada desenho conta uma história saída direto do coração 💜 Vem ver: ${url}`}
+            label="Enviar no WhatsApp"
+          />
         </div>
 
         <p className="share-note">

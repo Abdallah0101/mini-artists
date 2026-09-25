@@ -49,7 +49,7 @@ export default function Footer() {
             Feito com <DoodleHeart size={14} color="#FF5C8A" /> para guardar a infância para sempre
           </span>
           <span className="footer-stars" aria-hidden="true">
-            <DoodleStar size={16} /> {new Date().getFullYear()} <DoodleStar size={16} />
+            <DoodleStar size={16} /> {new Date().getFullYear()} · v2.0 💫 <DoodleStar size={16} />
           </span>
         </div>
       </div>

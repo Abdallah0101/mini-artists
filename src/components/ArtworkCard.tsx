@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import type { Artwork } from '../data/artworks'
 import { formatDate } from '../data/artworks'
 import { getArtist } from '../data/artists'
+import { WhatsAppIcon, whatsappShareUrl } from './WhatsAppButton'
+import { siteUrl } from './ShareSection'
 
 /** Coração com curtida local (localStorage). Pronto para virar "favoritos" com backend. */
 export function useLiked(artworkId: string): [boolean, () => void] {
@@ -24,15 +26,24 @@ export function useLiked(artworkId: string): [boolean, () => void] {
   return [liked, () => setLiked((v) => !v)]
 }
 
+const BURST = [
+  { x: -26, y: -34, c: '#FF4F87', e: '❤' },
+  { x: 0, y: -44, c: '#FFD45A', e: '✦' },
+  { x: 26, y: -34, c: '#9B6BEA', e: '⭐' },
+  { x: -16, y: -50, c: '#55B8F7', e: '✦' },
+  { x: 16, y: -50, c: '#FF9D42', e: '❤' },
+  { x: 34, y: -20, c: '#71D6A2', e: '✦' },
+]
+
 export function HeartButton({ artwork, big }: { artwork: Artwork; big?: boolean }) {
   const [liked, toggle] = useLiked(artwork.id)
-  const [pop, setPop] = useState(false)
+  const [burst, setBurst] = useState(0)
   const count = artwork.likes + (liked ? 1 : 0)
 
   return (
     <button
       type="button"
-      className={`heart-btn ${liked ? 'liked' : ''} ${pop ? 'pop' : ''} ${big ? 'big' : ''}`}
+      className={`heart-btn ${liked ? 'liked' : ''} ${big ? 'big' : ''}`}
       aria-pressed={liked}
       aria-label={liked ? `Remover curtida de ${artwork.title}` : `Curtir ${artwork.title}`}
       title="❤️ Toda arte merece um coração!"
@@ -40,10 +51,22 @@ export function HeartButton({ artwork, big }: { artwork: Artwork; big?: boolean 
         e.preventDefault()
         e.stopPropagation()
         toggle()
-        setPop(true)
-        setTimeout(() => setPop(false), 350)
+        setBurst(Date.now())
+        setTimeout(() => setBurst(0), 900)
       }}
     >
+      {burst > 0 && (
+        <span className="heart-burst" aria-hidden="true" key={burst}>
+          {BURST.map((p, i) => (
+            <i
+              key={i}
+              style={{ color: p.c, '--bx': `${p.x}px`, '--by': `${p.y}px` } as React.CSSProperties}
+            >
+              {p.e}
+            </i>
+          ))}
+        </span>
+      )}
       <svg viewBox="0 0 24 24" width={big ? 26 : 20} height={big ? 26 : 20} aria-hidden="true">
         <path
           d="M12 21 Q3 14.5 3 8.8 Q3 4.5 7 4.5 Q9.8 4.5 12 7.6 Q14.2 4.5 17 4.5 Q21 4.5 21 8.8 Q21 14.5 12 21 Z"
@@ -91,7 +114,26 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
           <p className="art-card-desc">{artwork.description}</p>
           <div className="art-card-footer">
             <time dateTime={artwork.createdAt}>{formatDate(artwork.createdAt)}</time>
-            <HeartButton artwork={artwork} />
+            <span className="art-card-buttons">
+              <HeartButton artwork={artwork} />
+              {artist && (
+                <button
+                  type="button"
+                  className="whats-mini"
+                  title="Enviar esta arte no WhatsApp 💚"
+                  aria-label={`Enviar ${artwork.title} no WhatsApp`}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    const url = `${siteUrl()}arte/${artwork.slug}`
+                    const msg = `🎨 Olha esse desenho! "${artwork.title}" — arte de ${artist.name}, ${artist.age} anos, na galeria MARMALILYTAS 💜 ${url}`
+                    window.open(whatsappShareUrl(msg), '_blank', 'noopener')
+                  }}
+                >
+                  <WhatsAppIcon size={16} />
+                </button>
+              )}
+            </span>
           </div>
         </div>
       </Link>

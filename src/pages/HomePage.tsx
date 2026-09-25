@@ -3,6 +3,8 @@ import Hero from '../components/Hero'
 import ArtistCard from '../components/ArtistCard'
 import GallerySection from '../components/GallerySection'
 import ShareSection from '../components/ShareSection'
+import Reveal from '../components/Reveal'
+import { StatsStrip, FeaturedArtwork } from '../components/HomeExtras'
 import { artists } from '../data/artists'
 import {
   DoodleStar,
@@ -23,7 +25,16 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <section className="artists-section container" id="artistas" aria-label="Nossos artistas">
+      <Reveal>
+        <StatsStrip />
+      </Reveal>
+
+      <Reveal>
+        <FeaturedArtwork />
+      </Reveal>
+
+      <Reveal>
+        <section className="artists-section container" id="artistas" aria-label="Nossos artistas">
         <h2 className="section-title">
           <DoodleStar size={36} tip="⭐ Nossos pequenos grandes artistas" />
           Nossos Artistas
@@ -39,11 +50,15 @@ export default function HomePage() {
             <span className="artist-card-tagline">Novos artistas vão brilhar por aqui!</span>
           </div>
         </div>
-      </section>
+        </section>
+      </Reveal>
 
-      <GallerySection />
+      <Reveal>
+        <GallerySection />
+      </Reveal>
 
-      <section className="about-section" id="sobre" aria-label="Sobre a galeria">
+      <Reveal>
+        <section className="about-section" id="sobre" aria-label="Sobre a galeria">
         <div className="container about-box">
           <DoodleCloud size={70} className="about-decor ad1 drift" color="#fff" />
           <DoodleRainbow size={80} className="about-decor ad2 float-med" />
@@ -65,9 +80,12 @@ export default function HomePage() {
           </p>
           <DoodleSquiggle size={90} color="#9B6BEA" className="about-squiggle" />
         </div>
-      </section>
+        </section>
+      </Reveal>
 
-      <ShareSection />
+      <Reveal>
+        <ShareSection />
+      </Reveal>
     </>
   )
 }
