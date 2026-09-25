@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mlk-010',
+    slug: 'o-elefante-de-abraha',
+    artistId: 'malik',
+    title: 'O Elefante de Abraha',
+    emoji: '🐘',
+    description: 'O elefante de Abraha veio destruir a Kaaba, mas Allah protegeu ela e não deixou, porque a Kaaba é a casa de Deus!',
+    category: 'Histórias do Islã 🕌',
+    image: img('malik', 'o-elefante-de-abraha.jpg'),
+    createdAt: '2026-09-26',
+    likes: 0,
+  },
+  {
     id: 'mlk-009',
     slug: 'godzilla-e-gorilla',
     artistId: 'malik',
