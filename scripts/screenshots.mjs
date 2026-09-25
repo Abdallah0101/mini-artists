@@ -7,10 +7,10 @@ import { chromium } from 'playwright'
 const BASE = 'http://localhost:4173'
 const shots = [
   { name: 'desktop-home', url: '/', width: 1440, height: 900, full: true },
-  { name: 'desktop-obra', url: '/arte/a-nave-espacial', width: 1440, height: 900, full: true },
+  { name: 'desktop-obra', url: '/arte/mundo-dos-gatos', width: 1440, height: 900, full: true },
   { name: 'desktop-artista', url: '/artistas/maryam', width: 1440, height: 900, full: true },
   { name: 'tablet-home', url: '/', width: 834, height: 1112, full: true },
-  { name: 'tablet-obra', url: '/arte/fundo-do-mar-magico', width: 834, height: 1112, full: true },
+  { name: 'tablet-obra', url: '/arte/garosa', width: 834, height: 1112, full: true },
   { name: 'mobile-home', url: '/', width: 390, height: 844, full: true },
   { name: 'mobile-galeria', url: '/galeria', width: 390, height: 844, full: true },
   { name: 'mobile-artista', url: '/artistas/malik', width: 390, height: 844, full: true },
