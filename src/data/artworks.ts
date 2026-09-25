@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mlk-008',
+    slug: 'mamute-e-mosasauro-no-fundo-do-mar',
+    artistId: 'malik',
+    title: 'Mamute e Mosassauro no Fundo do Mar',
+    emoji: '🦣',
+    description: 'No fundo do mar o mosassauro está comendo os peixes, o mamute foi passear de submarino e a ilha ali na verdade é um monstro!',
+    category: 'Fundo do Mar 🐢',
+    image: img('malik', 'mamute-e-mosasauro-no-fundo-do-mar.jpg'),
+    createdAt: '2026-09-25',
+    likes: 0,
+  },
+  {
     id: 'mlk-007',
     slug: 'a-luta-do-macaco-e-godzilla',
     artistId: 'malik',
