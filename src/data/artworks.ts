@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mlk-009',
+    slug: 'godzilla-e-gorilla',
+    artistId: 'malik',
+    title: 'Godzilla e Gorilla',
+    emoji: '🦖',
+    description: 'O Godzilla e o gorila se encarando pra ver quem é mais forte, e o helicóptero vermelho assistindo tudo lá do alto!',
+    category: 'Fantasia 🐉',
+    image: img('malik', 'godzilla-e-gorilla.jpg'),
+    createdAt: '2026-09-25',
+    likes: 0,
+  },
+  {
     id: 'mlk-008',
     slug: 'mamute-e-mosasauro-no-fundo-do-mar',
     artistId: 'malik',
