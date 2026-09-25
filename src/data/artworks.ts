@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mlk-006',
+    slug: 'o-tigre-extinto-e-o-monstro',
+    artistId: 'malik',
+    title: 'O Tigre Extinto e o Monstro',
+    emoji: '🐯',
+    description: 'Esse tigre extinto tem dentões de sabre e é tão bravo que até monstro foge de medo dele!',
+    category: 'Dinossauros 🦕',
+    image: img('malik', 'o-tigre-extinto-e-o-monstro.jpg'),
+    createdAt: '2026-09-25',
+    likes: 0,
+  },
+  {
     id: 'mrm-005',
     slug: 'garosa',
     artistId: 'maryam',
