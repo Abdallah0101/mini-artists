@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mlk-011',
+    slug: 'o-elefante-e-o-arco-iris',
+    artistId: 'malik',
+    title: 'O Elefante e o Arco-Íris',
+    emoji: '🐘',
+    description: 'Meu elefante gigante mora na montanha do arco-íris, e o passarinho amarelo e as crianças de guarda-chuva vieram conhecer ele!',
+    category: 'Animais 🐱',
+    image: img('malik', 'o-elefante-e-o-arco-iris.jpg'),
+    createdAt: '2026-09-29',
+    likes: 0,
+  },
+  {
     id: 'mlk-010',
     slug: 'o-elefante-de-abraha',
     artistId: 'malik',
