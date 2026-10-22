@@ -28,6 +28,18 @@ const img = (artist: string, file: string) => `${base}artworks/${artist}/${file}
 
 export const artworks: Artwork[] = [
   {
+    id: 'mrm-006',
+    slug: 'o-gatinho-kawaii',
+    artistId: 'maryam',
+    title: 'O Gatinho Kawaii',
+    emoji: '😻',
+    description: 'Esse gatinho branco de olho azul é muito fofinho, ele mandou um coração no balãozinho pra mim e tem até um ratinho arco-íris!',
+    category: 'Animais 🐱',
+    image: img('maryam', 'o-gatinho-kawaii.jpg'),
+    createdAt: '2026-10-22',
+    likes: 0,
+  },
+  {
     id: 'mlk-011',
     slug: 'o-elefante-e-o-arco-iris',
     artistId: 'malik',
